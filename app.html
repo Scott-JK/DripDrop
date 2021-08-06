@@ -51,37 +51,41 @@
     <!-- ==== Main Section ==== -->
     <main class="flex-shrink-0">
         <div class="container">
-            <div class="row">
-                <div class="col-6 gy-3">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col col-lg-6 border-end border-2">
                     <h3>DRIP DROP: A Coding Project</h3>
-                    <p>When it counts you Drip Drop. A Javascript coding exercise using loops. Write a program that prints numbers from 1 to 100 and for multiples of '3' display "Drip" instead of the number and for multiples of '5' display "Drop". If a multiple of both display "DripDrop".</p>
+                    <h4 class="lead">When it counts you Drip Drop. A Javascript coding exercise using loops. Write a program that prints numbers from 1 to 100 and for multiples of '3' display "Drip" instead of the number and for multiples of '5' display "Drop". If a multiple of both display "DripDrop".</h4>
                     <hr>
                     <h3>Instructions</h3>
-                    <p>Enter a drip and a drop value. Press the button and the values will appear.</p>
+                    <h4 class="lead">Enter a drip and a drop value. Press the button and the values will appear.</h4>
                 </div>
-                <div class="col">
+                <div class="col col-lg-6 gy-3">
                     <div class="row">
-                        <div class="col-6">
-                            <input id="dripValue" type="number">
+                    <form class="row gy-2 gx-3 mb-3">
+                        <div class="col">
+                            <h5>Enter a Drip Value.</h4>
+                            <input id="dripValue" type="number" class="form-control" placeholder="Drip Value" value=3 aria-label="Drip Value">
                         </div>
-                        <div class="col-6">
-                            <input id="dropValue" type="number">
+                        <div class="col">
+                            <h5>Enter a Drop Value.</h5>
+                            <input id="dropValue" type="number" class="form-control" placeholder="Drop Value" value=5 aria-label="Drop Value">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <button id="submit" value="input" type="button" class="btn btn-outline-primary">Submit</button>
+                        <div class="col-12 d-flex justify-content-start">
+                            <button id="btnSubmit" type="button" class="btn btn-outline-primary">Submit</button>
                         </div>
                     </div>
+                    </form>
                     <div class="row">
-                        <div class="col">
-                            <h3>Results</h3>
+                        <div class="col table-responsive">
+                            <h3 class="mt-5">Results</h3>
                             <table>
                                 <thead>
                                     <strong>Drip Drop Results</strong>
                                 </thead>
-                                <tbody>
-
+                                <tbody id="results">
+                                    <!--Results go Here-->
                                 </tbody>
                             </table>
                         </div>
@@ -119,6 +123,9 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <script src="js/site.js"></script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click",getValues);
+    </script>
 </body>
 
 </html>
