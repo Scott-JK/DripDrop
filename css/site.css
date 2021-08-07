@@ -65,3 +65,15 @@ code[class*="language-"], pre[class*="language-"] {
             word-wrap: break-word;
         }
 
+.Drip{
+    color:darkviolet;
+}
+
+.Drop{
+    color:darkorange;
+}
+
+.DripDrop{
+    color:darkgreen;
+    font-weight: bolder;
+}
